@@ -1,9 +1,8 @@
 import React from 'react'
 
-function App() {
+export default function App() {
   return (
-    <div>App</div>
+    <div><h1>salom git x</h1></div>
   )
 }
 
-export default App
