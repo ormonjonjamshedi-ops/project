@@ -56,22 +56,9 @@ function App() {
   return (
     <div style={{ padding: '20px' }}>
   
-      <input
-        type="text"
-        placeholder="Search by name or surname..."
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        style={{
-          border: '2px solid grey',
-          padding: '10px',
-          width: '100%',
-          marginBottom: '20px',
-          borderRadius: '5px'
-        }}
-      />
-
+      <input type="text"   placeholder="Search by name or surname..."   value={searchTerm}  onChange={(e) => setSearchTerm(e.target.value)}  style={{   border: '2px solid grey',
+          padding: '10px', width: '100%', marginBottom: '20px',   borderRadius: '5px'  }} />
       <button onClick={() => setOpenAdd(true)}>ADD +</button>
-
      
       {filteredData.map((user) => (
         <div key={user.id} style={{ borderBottom: '1px solid #ccc', marginBottom: '10px', paddingBottom: '10px' }}>
@@ -90,48 +77,16 @@ function App() {
             value={elemEdit?.name || ''}
             onChange={(e) =>
               setElemEdit((prev) => ({ ...prev, name: e.target.value }))
-            }
-            name="name"
-            placeholder="Name"
-            style={{ border: '2px solid grey', padding: '10px' }}
-            type="text"
-            required
-          />
-          <input
-            value={elemEdit?.surname || ''}
-            onChange={(e) =>
-              setElemEdit((prev) => ({ ...prev, surname: e.target.value }))
-            }
-            name="surname"
-            placeholder="Surname"
-            style={{ border: '2px solid grey', padding: '10px' }}
-            type="text"
-            required
-          />
+            }  name="name"  placeholder="Name" style={{ border: '2px solid grey', padding: '10px' }}  type="text"   required  />
+          <input value={elemEdit?.surname || ''} onChange={(e) =>
+              setElemEdit((prev) => ({ ...prev, surname: e.target.value })) }
+            name="surname" placeholder="Surname" style={{ border: '2px solid grey', padding: '10px' }} type="text" required/>
           <input
             value={elemEdit?.age || ''}
-            onChange={(e) =>
-              setElemEdit((prev) => ({ ...prev, age: Number(e.target.value) }))
-            }
-            name="age"
-            placeholder="Age"
-            style={{ border: '2px solid grey', padding: '10px' }}
-            type="number"
-            required
-          />
-          <button
-            style={{
-              border: '2px solid green',
-              background: 'green',
-              color: 'white',
-              padding: '10px',
-              cursor: 'pointer',
-            }}
-            type="submit"
-          >
-            Save
-          </button>
-        </form>
+            onChange={(e) => setElemEdit((prev) => ({ ...prev, age: Number(e.target.value) }))}
+            name="age" placeholder="Age" style={{ border: '2px solid grey', padding: '10px' }}  type="number" required />
+          <button style={{border: '2px solid green',background: 'green', color: 'white', padding: '10px', cursor: 'pointer',
+            }} type="submit">Save  </button> </form>
       </Modal>
 
       <Modal open={openAdd} setOpen={setOpenAdd}>
