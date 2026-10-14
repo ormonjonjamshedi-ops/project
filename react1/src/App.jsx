@@ -47,10 +47,10 @@ const columns = [
       <Space size="middle">
        
         <a style={{ color: 'red' }}>
-        <DeleteOutlined style={{ marginRight: 5 }} />
+        <DeleteOutlined style={{ marginRight: 8 }} />
       </a>
        <a style={{ color: 'green' }}>
-        <EditOutlined style={{ marginRight: 5 }} />
+        <EditOutlined style={{ marginRight: 8}}  />
       </a>
         <a style={{ color: 'green' }}>
         <InfoCircleTwoTone />
